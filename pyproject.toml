@@ -10,10 +10,19 @@ readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
 
+dependencies = [
+    "jcs>=0.2.0",
+    "PyYAML>=6.0",
+]
+
 [project.optional-dependencies]
-test = ["pytest>=7.0", "jcs>=0.2.0", "PyYAML>=6.0"]
+dev = [
+    "pytest>=8.0",
+    "ruff",
+    "mypy",
+]
 
 [tool.pytest.ini_options]
-minversion = "7.0"
+minversion = "8.0"
 addopts = "-ra -q"
 testpaths = ["tests"]
